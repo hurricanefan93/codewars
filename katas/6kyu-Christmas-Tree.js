@@ -14,3 +14,17 @@ Use \n for newlines between each line.
 Pad with spaces so each line is the same length. The last line having only stars, no spaces.
 
 My solution:
+
+function christmasTree(height) {
+  var tree = '';
+  var spaces = Array(height).join(' ');
+
+  for (var i = 0; i < height; i++) {
+    var stars = Array((i * 2) + 2).join('*');
+    if (tree !== '') tree += '\n';
+    tree += spaces + stars + spaces;
+    spaces = spaces.slice(0, -1);
+  }
+
+  return tree;
+}
