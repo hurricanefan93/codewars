@@ -4,3 +4,5 @@ each taken only once - coming from s1 or s2. #Examples: ``` a = "xyaabbbccccdefw
 a = "abcdefghijklmnopqrstuvwxyz" longest(a, a) -> "abcdefghijklmnopqrstuvwxyz" ```
 
 My solution:
+
+const longest = (a, b) => [...new Set(a + b)].sort().join('');
